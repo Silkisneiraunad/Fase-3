@@ -1,0 +1,15 @@
+Proyecto Spark Streaming con Kafka
+Proyecto académico desarrollado para la Tarea 3: Procesamiento de Datos con Apache Spark.
+
+Descripción
+Este proyecto integra Apache Kafka y Apache Spark Streaming para procesar datos simulados de sensores en tiempo real.
+Kafka actúa como sistema de mensajería distribuido y Spark realiza el análisis para calcular promedios de temperatura y humedad.
+
+Archivos
+tarea3.py: procesamiento batch con Spark y un dataset CSV en HDFS.
+kafka_producer.py: genera datos JSON y los envía al topic sensor_data.
+spark_streaming_consumer.py: consume los datos en tiempo real desde Kafka y los procesa con Spark Structured Streaming.
+Ejecución
+Iniciar los servicios:
+bin/zookeeper-server-start.sh config/zookeeper.properties &
+bin/kafka-server-start.sh config/server.properties &
